@@ -1,0 +1,23 @@
+clear all
+a=imread('4.1.08.tiff');
+red=a(:,:,1);
+green=a(:,:,2);
+blue=a(:,:,3);
+imshow(a)
+b=a;
+subplot(2,2,1)
+imshow(a);
+a(:,:,2)=0;
+a(:,:,3)=0;
+subplot(2,2,2)
+imshow(a);
+a=b;
+a(:,:,1)=0;
+a(:,:,3)=0;
+subplot(2,2,3)
+imshow(a);
+a=b;
+a(:,:,1)=0;
+a(:,:,2)=0;
+subplot(2,2,4)
+imshow(a);
